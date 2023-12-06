@@ -1,0 +1,85 @@
+
+Nodejs is a environment to run JS outside Browser. 
+Built on chrome's V8 JS engine.
+
+Every browser has an engine, a tool that compiles our code down to machine.
+Chrome uses one by the name V8.
+
+
+{/*
+const { readFileSync, writeFileSync } = require("fs");
+
+const first = readFileSync("./content/first.txt", "utf8");
+const second = readFileSync("./content/second.txt", "utf8");
+// utf8 is for reading the text file.
+
+console.log(first, second);
+
+writeFileSync(
+  "./content/result-sync.txt",
+  `Here is the result : ${first}, ${second}`
+);
+*/}
+## for synchronously reading and writing the file.
+but writeFIleSync update the file by the content and 
+if the file is not there, it will create at the above path and write the content.
+by default it has a flag 'w' for write, but if it is 'a', it will append.
+
+
+
+{/*
+const { readFile, writeFile } = require("fs");
+
+readFile("./content/first.txt", "utf8", (err, result) => {
+  if (err) {
+    console.log(err);
+    return;
+  }
+  const first = result;
+})
+*/}
+## this is asynchronous reading and writing file.
+for asynchronously reading and writing file, we need to give the path, format, callback function.
+
+
+
+whenever we are making any asynchronous call we have to provide the callback function.
+
+
+
+{/*
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+    res.write('Welcome to our homepage');
+    res.end()
+})
+server.listen(5000)
+
+*/}
+## req :- incoming request
+## req :- sending response
+## 
+Looks like you've created a basic HTTP server using Node.js! 
+The 'createServer' method creates an HTTP server, and for any incoming request,
+ it writes the message to the response (res.write) and ends the response (res.end). 
+This effectively sends the specified message to the client's browser when they visit the server's homepage.
+The server is set to listen on port 5000, so when you run this code,
+ the server will start and respond with "Welcome to our homepage" for any request made to the root URL (`http://localhost:5000/`).
+
+
+
+
+
+
+{/*
+'lodash' is a popular JavaScript utility library
+ that provides a wide range of helper functions for manipulating and
+ working with arrays, objects, strings, functions, and more. 
+It's widely used due to its extensive set of features and
+ consistent, efficient APIs that simplify common programming tasks.
+*/}
+
+
+
+
